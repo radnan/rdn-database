@@ -7,24 +7,24 @@ Most application use more than one database adapter at a time. This module helps
 
 ## How to install
 
-Use `composer` to require the `radnan/rdn-database` package:
+1. Use `composer` to require the `radnan/rdn-database` package:
 
-~~~bash
-$ composer require radnan/rdn-database:1.*
-~~~
+   ~~~bash
+   $ composer require radnan/rdn-database:1.*
+   ~~~
 
-Activate the module by including it in your `application.config.php` file:
+2. Activate the module by including it in your `application.config.php` file:
 
-~~~php
-<?php
+   ~~~php
+   <?php
 
-return array(
-	'modules' => array(
-		'RdnDatabase',
-		// ...
-	),
-);
-~~~
+   return array(
+       'modules' => array(
+           'RdnDatabase',
+           // ...
+       ),
+   );
+   ~~~
 
 ## How to use
 
