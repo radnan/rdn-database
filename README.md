@@ -78,3 +78,24 @@ class FooController
 	}
 }
 ~~~
+
+### Factories
+
+The module depends on the [RdnFactory](https://github.com/radnan/rdn-factory) module and provides a `database()` plugin you can use when creating factory classes.
+
+~~~php
+namespace App\Factory\Controller;
+
+use App\Controller;
+use RdnFactory\AbstractFactory;
+
+class Index extends AbstractFactory
+{
+	protected function create()
+	{
+		$adapter = $this->database('default');
+
+		return new Controller\Index($adapter);
+	}
+}
+~~~
