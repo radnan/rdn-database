@@ -1,9 +1,7 @@
 RdnDatabase
 ===========
 
-Zend Framework 2 module that provides a service locator for database adapters.
-
-Most application use more than one database adapter at a time. This module helps creating new database adapters a breeze.
+The **RdnDatabase** ZF2 module provides a service locator for database adapters.
 
 ## How to install
 
@@ -41,14 +39,14 @@ return array(
 );
 ~~~
 
-You can use the `adapters` key to dynamically create adapters using simple configuration:
+You can use the **adapters** key to dynamically create adapters using simple configuration:
 
 ~~~php
 <?php
 
 return array(
 	'rdn_db_adapters' => array(
-		'adapters => array(
+		'adapters' => array(
 			'default' => array(
 				'driver'   => 'pdo_mysql',
 				'hostname' => null,
@@ -94,7 +92,6 @@ class Index extends AbstractFactory
 	protected function create()
 	{
 		$adapter = $this->database('default');
-
 		return new Controller\Index($adapter);
 	}
 }
